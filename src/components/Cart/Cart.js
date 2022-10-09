@@ -5,7 +5,7 @@ import { getStoredCart } from "../../utilities/fakedb";
 const Cart = (props) => {
   // const Cart = ({ cart }) => {
   const { cart } = props;
-  // console.log(cart);
+  console.log(cart);
   // const cart = props.cart;
   let total = 0;
   let shipping = 0;
