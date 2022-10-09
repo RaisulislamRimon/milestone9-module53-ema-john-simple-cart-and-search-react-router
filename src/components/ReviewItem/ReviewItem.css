@@ -1,3 +1,12 @@
+.review-item {
+  display: flex;
+  border: 1px solid gray;
+  margin: 100px;
+}
 .review-item img {
   width: 91px;
+}
+
+.review-details-container {
+  display: flex;
 }
