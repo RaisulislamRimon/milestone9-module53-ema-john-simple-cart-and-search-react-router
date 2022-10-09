@@ -14,6 +14,7 @@ const App = () => {
       children: [
         {
           path: "/",
+          loader: () => fetch("products.json"),
           element: <Shop />,
         },
         {
@@ -26,7 +27,7 @@ const App = () => {
         },
         {
           path: "/orders",
-          loader: () => fetch('products.json'),
+          loader: () => fetch("products.json"),
           element: <Orders />,
         },
       ],
