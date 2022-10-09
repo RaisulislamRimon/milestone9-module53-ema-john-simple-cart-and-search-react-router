@@ -6,12 +6,21 @@ import ReviewItem from "../ReviewItem/ReviewItem";
 const Orders = () => {
   const { products, initialCart } = useLoaderData(); // { products, initialCart }
   const [cart, setCart] = useState(initialCart);
+
+  const handleRemoveItem = (id) => {
+    console.log("handleRemoveItem clicked", id);
+  };
+
   return (
     <div>
       <div className="shop-container">
         <div className="orders-container">
           {cart.map((product) => (
-            <ReviewItem key={product.id} product={product} />
+            <ReviewItem
+              key={product.id}
+              product={product}
+              handleRemoveItem={handleRemoveItem}
+            />
           ))}
         </div>
         <div className="cart-container">
