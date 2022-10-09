@@ -1,11 +1,11 @@
 import React from "react";
+import "./ReviewItem.css";
 
 const ReviewItem = ({ product }) => {
-  const { name, price, quantity } = product;
+  const { name, img, price, quantity } = product;
   return (
-    <div>
-      <h1>ReviewItem</h1>
-      <p>{name}</p>
+    <div className="review-item">
+      <img src={img} alt={name} />
     </div>
   );
 };
