@@ -11,7 +11,12 @@ const productsAndCartLoader = async () => {
 
   for (const id in savedCart) {
     const addedProduct = products.find((product) => product.id === id);
-    console.log(id, addedProduct);
+    // console.log(id, addedProduct);
+    if (addedProduct) {
+      const quantity = savedCart[id];
+      //   console.log(id, quantity);
+      savedCart.quantity = quantity;
+    }
   }
   return products;
 
