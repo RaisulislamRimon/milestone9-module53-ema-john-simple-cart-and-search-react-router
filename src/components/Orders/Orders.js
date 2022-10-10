@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import { removeFromDb } from "../../utilities/fakedb";
 import Cart from "../Cart/Cart";
 import ReviewItem from "../ReviewItem/ReviewItem";
 
@@ -8,7 +9,9 @@ const Orders = () => {
   const [cart, setCart] = useState(initialCart);
 
   const handleRemoveItem = (id) => {
-    console.log("handleRemoveItem clicked", id);
+    const remaining = cart.filter((product) => product.id !== id);
+    removeFromDb(id);
+    setCart(remaining);
   };
 
   return (
