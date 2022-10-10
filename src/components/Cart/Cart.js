@@ -4,7 +4,7 @@ import { getStoredCart } from "../../utilities/fakedb";
 
 const Cart = (props) => {
   // const Cart = ({ cart }) => {
-  const { cart } = props;
+  const { cart, clearCart } = props;
   // console.log(cart);
   // const cart = props.cart;
   let total = 0;
@@ -27,6 +27,9 @@ const Cart = (props) => {
       <p>Total Shipping: ${shipping}</p>
       <p>Tax: ${tax}</p>
       <p>Grand Total: ${grandTotal}</p>
+      <div>
+        <button onClick={clearCart}>Clear Cart</button>
+      </div>
     </div>
   );
 };
